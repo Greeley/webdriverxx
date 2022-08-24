@@ -15,19 +15,19 @@ endif()
 
 enable_testing()
 
-include_directories(${CMAKE_SOURCE_DIR}/src/include)
+include_directories(${CMAKE_SOURCE_DIR}/include)
 
 if(WIN32)
 	# curl
 	#add_subdirectory(${CMAKE_SOURCE_DIR}/src/thirdparty/curl)
-	include_directories(${CMAKE_SOURCE_DIR}/src/thirdparty/curl/include)
-	link_directories(${CMAKE_SOURCE_DIR}/src/thirdparty/curl/lib)
-	add_subdirectory(${CMAKE_SOURCE_DIR}/src/test)
-elseif(UNIX AND NOT APPLE)
+	include_directories(${CMAKE_SOURCE_DIR}/thirdparty/curl/include)
+	link_directories(${CMAKE_SOURCE_DIR}/thirdparty/curl/lib)
+	add_subdirectory(${CMAKE_SOURCE_DIR}/test)
+elseif(UNIX OR APPLE)
 	find_package(CURL REQUIRED)
 	include_directories(${CURL_INCLUDE_DIR})
 	
-	install(DIRECTORY ${CMAKE_SOURCE_DIR}/src/include/
-                  DESTINATION src/include/${PROJECT_NAME}
+	install(DIRECTORY ${CMAKE_SOURCE_DIR}/include/
+                  DESTINATION include/${PROJECT_NAME}
                   FILES_MATCHING PATTERN "*")
 endif()
