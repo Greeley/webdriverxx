@@ -114,7 +114,8 @@ namespace webdriverxx {
 			SetBrowserName(browser::Chrome);
 			// SetVersion(defaults.GetVersion());   // 加上这句就可以，BrowserName不能为空
 			SetPlatform(platform::Any);
-			SetPageLoadStrategy(page_load_strategy::Normal)
+			SetPageLoadStrategy(page_load_strategy::Normal);
+			SetChromeOptions(ChromeOptions());
 		}
 
 		// See https://sites.google.com/a/chromium.org/chromedriver/capabilities for details
