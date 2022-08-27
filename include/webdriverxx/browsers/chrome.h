@@ -112,8 +112,9 @@ namespace webdriverxx {
 		Chrome(const Capabilities& defaults = Capabilities())
 			: Capabilities(defaults) {
 			SetBrowserName(browser::Chrome);
-			SetVersion(defaults.GetVersion());   // 加上这句就可以，BrowserName不能为空
+			// SetVersion(defaults.GetVersion());   // 加上这句就可以，BrowserName不能为空
 			SetPlatform(platform::Any);
+			SetPageLoadStrategy(page_load_strategy::Normal)
 		}
 
 		// See https://sites.google.com/a/chromium.org/chromedriver/capabilities for details
