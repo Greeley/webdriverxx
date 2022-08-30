@@ -42,4 +42,4 @@
 /v17
 /.vs
 /cmake_build
-.vscode
+.vscode/*
