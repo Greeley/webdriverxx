@@ -34,8 +34,12 @@
 # backup file
 *.bak
 
+#debugginf files
+*.log
+
 # Folders
 /build
 /v17
 /.vs
 /cmake_build
+.vscode

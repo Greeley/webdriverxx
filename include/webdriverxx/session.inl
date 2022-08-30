@@ -30,6 +30,9 @@ namespace webdriverxx {
 
 	inline
 		Capabilities Session::GetCapabilities() const {
+			//TODO: Get /status from hub.
+			//TODO: Get weblocation of node with matching sessionID
+			//TODO: Request Session from Node instead of hub.
 		return Capabilities(resource_->Get().get<picojson::object>());
 	}
 

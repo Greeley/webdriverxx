@@ -30,6 +30,8 @@ public:
 		const Capabilities& required
 		) const;
 
+	void AttachSession(); //TODO: implement
+
 private:
 	Session MakeSession(
 		const std::string& id,
@@ -38,6 +40,7 @@ private:
 
 private:
 	detail::Shared<detail::Resource> resource_;
+	detail::Shared<detail::Resource> current_node_;
 };
 
 } // namespace webdriverxx

@@ -77,4 +77,11 @@ Session Client::MakeSession(
 	return Session(detail::MakeSubResource(resource_, "session", id, mode));
 }
 
+inline
+void Client::AttachSession(){
+	//TODO: GetStatus
+	//TODO: get session info from status
+	//TODO: Request status of node.
+}
+
 } // namespace webdriverxx
